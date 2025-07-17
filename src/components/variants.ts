@@ -126,47 +126,68 @@ export const buttonTextVariants = cva("", {
   },
 });
 
-export const iconButtonVariants = cva("inline-flex items-center justify-center cursor-pointer transition group", {
+export const iconButtonVariants = cva(
+  "inline-flex items-center justify-center cursor-pointer transition group",
+  {
     variants: {
-        variant: {
-            primary: "bg-green-base hover:bg-green-dark",
-            secondary: "bg-pink-base hover:bg-pink-dark",
-            tertiary: "bg-transparent hover:bg-gray-200",
-            default: "bg-gray-200 hover:bg-gray-300",
-        },
-        size: {
-            sm: "w-6 h-6 p-1 rounded",
-            md: "w-10 h-10 p-1 rounded",
-            lg: "w-12 h-12 p-2 rounded",
-        },
-        disabled: {
-            true: "opacity-50 cursor-not-allowed pointer-events-none",
-            false: "",
-        },
+      variant: {
+        primary: "bg-green-base hover:bg-green-dark",
+        secondary: "bg-pink-base hover:bg-pink-dark",
+        tertiary: "bg-transparent hover:bg-gray-200",
+        default: "bg-gray-200 hover:bg-gray-300",
+      },
+      size: {
+        sm: "w-6 h-6 p-1 rounded",
+        md: "w-10 h-10 p-1 rounded",
+        lg: "w-12 h-12 p-2 rounded",
+      },
+      disabled: {
+        true: "opacity-50 cursor-not-allowed pointer-events-none",
+        false: "",
+      },
     },
     defaultVariants: {
-        variant: "primary",
-        size: "sm",
-        disabled: false,
+      variant: "primary",
+      size: "sm",
+      disabled: false,
     },
-});
+  }
+);
 
 export const iconButtonIconVariants = cva("transition", {
+  variants: {
+    size: {
+      sm: "w-3 h-3",
+      md: "w-5 h-5",
+      lg: "w-6 h-6",
+    },
+    variant: {
+      primary: "fill-white",
+      secondary: "fill-white",
+      tertiary: "fill-gray-400",
+      default: "fill-gray-400",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+    variant: "primary",
+  },
+});
+
+export const inputTextVariants = cva(
+  "border-b border-solid border-gray-200 focus:border-pink-base bg-transparent outline-none",
+  {
     variants: {
-        size: {
-            sm: "w-3 h-3",
-            md: "w-5 h-5",
-            lg: "w-6 h-6",
-        },
-        variant: {
-            primary: "fill-white",
-            secondary: "fill-white",
-            tertiary: "fill-gray-400",
-            default: "fill-gray-400",
-        },
+      size: {
+        md: "pb-2 px-2",
+      },
+      disabled: {
+        true: "pointer-events-none",
+      },
     },
     defaultVariants: {
-        size: "md",
-        variant: "primary",
+      size: "md",
+      disabled: false,
     },
-});
+  }
+);

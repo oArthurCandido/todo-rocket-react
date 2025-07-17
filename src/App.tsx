@@ -17,6 +17,7 @@ import { Icon } from "./components/Icon";
 import { Badge } from "./components/Badge";
 import { Button } from "./components/Button";
 import { ButtonIcon } from "./components/ButtonIcon";
+import InputText from "./components/InputText";
 
 function App() {
   return (
@@ -60,17 +61,22 @@ function App() {
         <ButtonIcon icon={PlusIcon} />
         <ButtonIcon icon={CheckCircleIcon} variant={"secondary"} />
         <ButtonIcon icon={CheckIcon} variant={"tertiary"} />
-        <ButtonIcon icon={PlusIcon} size={"lg"} disabled/>
+        <ButtonIcon icon={PlusIcon} size={"lg"} disabled />
       </div>
       <div className="">
         <h1>Sem React</h1>
         <button>Botão original html</button>
       </div>
 
-<div>
-  <Text as="h1">Com React</Text>
-  <Button variant={"default"} size={"sm"}>Botão React</Button>
-</div>
+      <div>
+        <Text as="h1">Com React</Text>
+        <Button variant={"default"} size={"sm"}>
+          Botão React
+        </Button>
+      </div>
+      <div>
+        <InputText></InputText>
+      </div>
     </>
   );
 }
