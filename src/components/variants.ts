@@ -243,3 +243,16 @@ export const cardVariants = cva("rounded-lg border border-solid border-gray-200 
     size: "none"
   }
 })
+
+export const containerVariants = cva(
+  "mx-auto",
+   {
+  variants: {
+    size: {
+      md: "max-w-lg px-2"
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+})
