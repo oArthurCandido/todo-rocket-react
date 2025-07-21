@@ -191,3 +191,44 @@ export const inputTextVariants = cva(
     },
   }
 );
+
+export const inputCheckboxWrapperVariants = cva("inline-flex items-center justify-center relative group" );
+
+
+export const inputCheckboxVariants = cva(
+  "appearance-none peer flex items-center justify-center rounded-[2px] cursor-pointer border-2 border-solid transition overflow-hidden  border-green-base hover:border-green-dark hover:bg-green-dark checked:border-green-base checked:bg-green-base group-hover:checked:border-green-dark group-hover:checked:bg-green-dark",
+  {
+    variants: {
+      size: {
+        sm: "w-4 h-4",
+        md: "w-5 h-5 rounded-sm",
+        lg: "w-8 h-8",
+      },
+      disabled: {
+        true: "pointer-events-none",
+        false: "",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+      disabled: false,
+    },
+  }
+);
+
+export const inputCheckboxIconVariants = cva(
+  "hidden peer-checked:block w-3 h-3 fill-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition cursor-pointer",
+  {
+    variants: {
+      size: {
+        sm: "w-2 h-2",
+        md: "w-3 h-3",
+        lg: "w-4 h-4",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
