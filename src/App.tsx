@@ -19,6 +19,7 @@ import { Button } from "./components/Button";
 import { ButtonIcon } from "./components/ButtonIcon";
 import InputText from "./components/InputText";
 import { InputCheckbox } from "./components/InputCheckbox";
+import { Card } from "./components/Card";
 
 function App() {
   return (
@@ -80,6 +81,11 @@ function App() {
       <Text>Componente InputCheckbox:</Text>
       <div>
         <InputCheckbox />
+      </div>
+      <div>
+        <Card size={"md"} as="section">
+          <h1>This is my card</h1>
+        </Card>
       </div>
     </div>
   );
