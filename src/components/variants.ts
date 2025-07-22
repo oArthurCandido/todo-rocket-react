@@ -30,6 +30,7 @@ export const badgeVariants = cva(
   {
     variants: {
       variant: {
+        none: "",
         default: "bg-gray-200",
         primary: "bg-green-light",
         secondary: "bg-pink-light",
@@ -50,6 +51,7 @@ export const badgeVariants = cva(
 export const badgeTextVariants = cva("", {
   variants: {
     variant: {
+      none: "",
       primary: "text-green-dark",
       secondary: "text-pink-dark",
       default: "text-gray-400",
@@ -60,11 +62,25 @@ export const badgeTextVariants = cva("", {
   },
 });
 
+export const badgeSkeletonVariants = cva("",{
+  variants: {
+    size: {
+      sm: "h-6 w-6",
+      md: "",
+      lg: ""
+    }
+  },
+  defaultVariants: {
+    size: "sm"
+  }
+})
+
 export const buttonVariants = cva(
   "rounded-lg transition flex items-center cursor-pointer gap-2 group",
   {
     variants: {
       variant: {
+        none: "",
         default: "bg-gray-200",
         primary: "bg-gray-200 hover:bg-pink-light",
         secondary: "bg-pink-light hover:bg-pink-dark",
@@ -95,6 +111,7 @@ export const buttonIconVariants = cva("transition", {
       lg: "w-6 h-6",
     },
     variant: {
+      none: "",
       default: "fill-gray-400",
       primary: "fill-pink-base",
       secondary: "fill-pink-dark",
@@ -109,6 +126,7 @@ export const buttonIconVariants = cva("transition", {
 export const buttonTextVariants = cva("", {
   variants: {
     variant: {
+      none: "",
       primary: "text-gray-400",
       secondary: "text-pink-dark group-hover:text-white",
       default: "text-gray-400",
@@ -131,6 +149,7 @@ export const iconButtonVariants = cva(
   {
     variants: {
       variant: {
+        none: "",
         primary: "bg-green-base hover:bg-green-dark",
         secondary: "bg-pink-base hover:bg-pink-dark",
         tertiary: "bg-transparent hover:bg-gray-200",
@@ -162,6 +181,7 @@ export const iconButtonIconVariants = cva("transition", {
       lg: "w-6 h-6",
     },
     variant: {
+      none: "",
       primary: "fill-white",
       secondary: "fill-white",
       tertiary: "fill-gray-400",
@@ -173,6 +193,10 @@ export const iconButtonIconVariants = cva("transition", {
     variant: "primary",
   },
 });
+
+// export const iconButtonSkeletonVariants = cva("", {
+//   variants: {}
+// })
 
 export const inputTextVariants = cva(
   "border-b border-solid border-gray-200 focus:border-pink-base bg-transparent outline-none",
@@ -192,13 +216,18 @@ export const inputTextVariants = cva(
   }
 );
 
-export const inputCheckboxWrapperVariants = cva("inline-flex items-center justify-center relative group" );
-
+export const inputCheckboxWrapperVariants = cva(
+  "inline-flex items-center justify-center relative group"
+);
 
 export const inputCheckboxVariants = cva(
-  "appearance-none peer flex items-center justify-center rounded-[2px] cursor-pointer border-2 border-solid transition overflow-hidden  border-green-base hover:border-green-dark hover:bg-green-dark checked:border-green-base checked:bg-green-base group-hover:checked:border-green-dark group-hover:checked:bg-green-dark",
+  "appearance-none peer flex items-center justify-center rounded-[2px] cursor-pointer transition overflow-hidden ",
   {
     variants: {
+      variant: {
+        default: "border-2 border-solid  border-green-base hover:border-green-dark hover:bg-green-dark checked:border-green-base checked:bg-green-base group-hover:checked:border-green-dark group-hover:checked:bg-green-dark",
+        none: ""
+      },
       size: {
         sm: "w-4 h-4",
         md: "w-5 h-5 rounded-sm",
@@ -212,6 +241,7 @@ export const inputCheckboxVariants = cva(
     defaultVariants: {
       size: "md",
       disabled: false,
+      variant: "default"
     },
   }
 );
@@ -232,27 +262,42 @@ export const inputCheckboxIconVariants = cva(
   }
 );
 
-export const cardVariants = cva("rounded-lg border border-solid border-gray-200 bg-white shadow-sm",{
-  variants: {
-    size: {
-      none: "",
-      md: "p-5"
-    }
-  },
-  defaultVariants:{
-    size: "none"
+export const cardVariants = cva(
+  "rounded-lg border border-solid border-gray-200 bg-white shadow-sm",
+  {
+    variants: {
+      size: {
+        none: "",
+        md: "p-5",
+      },
+    },
+    defaultVariants: {
+      size: "none",
+    },
   }
-})
+);
 
-export const containerVariants = cva(
-  "mx-auto",
-   {
+export const containerVariants = cva("mx-auto", {
   variants: {
     size: {
-      md: "max-w-lg px-2"
-    }
+      md: "max-w-lg px-2",
+    },
   },
   defaultVariants: {
-    size: "md"
-  }
-})
+    size: "md",
+  },
+});
+
+export const skeletonVariants = cva("animate-pulse bg-gray-200 pointer-events-none", {
+  variants: {
+    rounded: {
+      sm: "rounded-sm",
+      md: "rounded-md",
+      lg: "rounded-lg",
+      full: "rounded-full",
+    },
+  },
+  defaultVariants: {
+    rounded: "lg",
+  },
+});
